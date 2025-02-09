@@ -12,7 +12,13 @@ function agregarTextoElemento(elemento,texto) {
     elementoHTML.innerHTML = texto;
    return;
 }
+// Se agrega esta funcion para poder enlistar de forma indidual y organizada
+function listaActualizada() {
+    let nuevaLista = document.getElementById("listaAmigos");
+    nuevaLista.innerHTML = amigosLista.map(amigoAgregado =>`<li> • ${amigoAgregado}</li>`).join('');
+}
 
+// Funcion usada especificamete para la interaccion del usuario con el input, donde reacciona a diferentes condiciones
 function ingresaAmigo() {
     let nombreAgregado = document.getElementById('amigoAgregado').value;
     let amigos = nombreAgregado;
@@ -23,23 +29,23 @@ function ingresaAmigo() {
                 return alert("Nombre ya existente"), cajaLimpiaRepetido();
         } else {
             amigosLista.push(amigos);
-            return agregarTextoElemento('h3', `${amigosLista}`), cajaLimpia();
+            return listaActualizada(), cajaLimpia();
         }
      }
      return;
 }
-
+// Funcion usada para limpiar la caa de input cuando se repite el nombre ingresado
 function cajaLimpiaRepetido() {
     document.querySelector('#amigoAgregado').value = '';
 }
-
+// Funcion usada para limpiar la caja de input cuando se agrega un nuevo nombre
 function cajaLimpia() {
     document.querySelector('#amigoAgregado').value = '';
 }
 
-
+// funcion realizada para la impresion de los texto en los elementos deseados
 function condicionesIniciales() {
-    agregarTextoElemento('h1','Bienvenido al Juego del Amigo Secreto');
+    agregarTextoElemento('h1','Bienvenidos al Juego del Amigo Secreto');
     agregarTextoElemento('h2','Ingresa el nombre de tus amigos');
 }    
 
