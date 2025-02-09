@@ -2,18 +2,40 @@
 //Instrucciones del curso, paso 1: Crea una lista de nombre "Amigos" 
 
 let amigos = [];
-
+console.log(amigos)
 //Desarrolla una función, que permita al usuario ingresar un nombre en el campo de texto 
 // y añadirlo a la lista de amigos creada anteriormente.
 //Tareas especificas 
 
-function agregarAmigo(elemento, texto) {
-    let elementoHTML = document.getElementById('amigoAgregado');
+function agregarTextoElemento(elemento,texto) {
+    let elementoHTML = document.querySelector(elemento);
     elementoHTML.innerHTML = texto;
-    return;
+   return;
 }
 
+function ingresaAmigo() {
+    let nombreAgregado = document.getElementById('amigoAgregado').value;
+    if (nombreAgregado == ("")){
+        alert("Ingresa un nombre correcto");
+    } else {
+        amigos.push;
+        cajaLimpia();
+     }
+     return;
+}
 
+function cajaLimpia() {
+    document.querySelector('#amigoAgregado').value = '';
+}
 
-nombresTextoElementos('h1','Bienvenido al Juego del Amigo Secreto');
-nombresTextoElementos('h2','Ingresa el nombre de tus amigos');
+function condicionesIniciales() {
+    agregarTextoElemento('h1','Bienvenido al Juego del Amigo Secreto');
+    agregarTextoElemento('h2','Ingresa el nombre de tus amigos');
+}    
+
+function reiniciarElJuego () {
+    cajaLimpia();
+    condicionesIniciales();
+}
+
+condicionesIniciales();
