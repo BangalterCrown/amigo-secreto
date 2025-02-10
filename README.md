@@ -72,4 +72,4 @@
 
 <h2> Autores del Proyecto </h2>
 
-- BangalterCrown
+- BangalterCrown: https://github.com/BangalterCrown
