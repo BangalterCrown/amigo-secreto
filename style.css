@@ -70,6 +70,14 @@ body {
     text-align: center;
 }
 
+.section-title2 {
+    font-family: "Calibri", serif;
+    font-size: 18px;
+    font-weight: 350;
+    color: #121b3a);
+    margin: 8px 0;
+    text-align: center;
+}
 /* Contenedores de entrada y botón */
 .input-wrapper {
     display: flex;
