@@ -18,4 +18,8 @@ Ingresa uno por uno insertando el nombre y añadiendolo con el botón 🖱️ qu
 Posteriormente una vez que hayas cargado suficientes nombres de tus amigos, ¡puedes sortear a tu amigo secreto!
 🖱️ Solo da click en ¡Iniciar Sorteo! 🖱️
 
+<img src="assets/img1.png">
 
+Una vez dado click, Inmediatamente nuestro sistema te revelara tu ¡Amigo Secreto!.
+
+<img src="assets/img2.png">
