@@ -10,7 +10,10 @@ function agregarTextoElemento(elemento,texto) {
     elementoHTML.innerHTML = texto;
    return;
 }
-
+function condicionesIniciales() {
+    agregarTextoElemento('h1','¡Bienvenidos al Juego: Amigo Secreto!');
+    agregarTextoElemento('h2','Ingresa los nombres de tus amigos:');
+}
 //Se agrega esta funcion para poder enlistar de forma indidual y organizada
 function listaActualizada() {
     let nuevaLista = document.getElementById("listaAmigos");
@@ -35,11 +38,6 @@ function ingresaAmigo() {
 //Funcion usada para limpiar la caja de input cuando se agrega un nombre repetido o el campo esta vacio
 function cajaLimpia() {
     document.querySelector('#amigoAgregado').value = '';
-}
-function condicionesIniciales() {
-    agregarTextoElemento('h1','¡Bienvenidos al Juego: Amigo Secreto!');
-    agregarTextoElemento('h2','Ingresa los nombres de tus amigos:');
-    cajaLimpia(); 
 }
 //Funcion para agregar la accion de Sorteo del Amigo Secreto   
 function sortearAmigo() {
@@ -67,7 +65,7 @@ function sortearAmigo() {
     amigosLista.length = 0;
     const listaAmigos = document.getElementById('listaAmigos');
     listaAmigos.innerHTML = '';
-    listaAmigos.style.display = 'none';
+    listaAmigos.style.display = '';
     const resultado = document.getElementById('resultadoSorteo');
     resultado.innerHTML = '';
     alert('El sorteo ha sido reiniciado.');
